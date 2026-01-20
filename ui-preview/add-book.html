@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Manager - Add Book</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="flex min-h-screen">
+        <!-- Sidebar (same as dashboard) -->
+        <div class="bg-gray-900 text-white w-64 min-h-screen p-4">
+            <div class="mb-8">
+                <h1 class="text-xl font-bold">Library Manager</h1>
+                <p class="text-gray-400 text-sm">Welcome, John Admin</p>
+            </div>
+            
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <i data-lucide="home" class="w-5 h-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-blue-600 text-white">
+                    <i data-lucide="book" class="w-5 h-5"></i>
+                    <span>Books</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    <span>Members</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <div class="space-y-6">
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 hover:bg-gray-100 rounded-lg">
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </button>
+                    <h1 class="text-3xl font-bold text-gray-900">Add New Book</h1>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="title" class="block text-sm font-medium text-gray-700">
+                                    Title *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="title"
+                                    name="title"
+                                    required
+                                    placeholder="Enter book title"
+                                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+
+                            <div>
+                                <label for="author" class="block text-sm font-medium text-gray-700">
+                                    Author *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="author"
+                                    name="author"
+                                    required
+                                    placeholder="Enter author name"
+                                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+
+                            <div>
+                                <label for="isbn" class="block text-sm font-medium text-gray-700">
+                                    ISBN *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="isbn"
+                                    name="isbn"
+                                    required
+                                    placeholder="978-0-123456-78-9"
+                                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+
+                            <div>
+                                <label for="genre" class="block text-sm font-medium text-gray-700">
+                                    Genre *
+                                </label>
+                                <select
+                                    id="genre"
+                                    name="genre"
+                                    required
+                                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                >
+                                    <option value="">Select a genre</option>
+                                    <option value="Fiction">Fiction</option>
+                                    <option value="Non-Fiction">Non-Fiction</option>
+                                    <option value="Science">Science</option>
+                                    <option value="History">History</option>
+                                    <option value="Biography">Biography</option>
+                                    <option value="Mystery">Mystery</option>
+                                    <option value="Romance">Romance</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="totalCopies" class="block text-sm font-medium text-gray-700">
+                                    Total Copies *
+                                </label>
+                                <input
+                                    type="number"
+                                    id="totalCopies"
+                                    name="totalCopies"
+                                    required
+                                    min="1"
+                                    value="1"
+                                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+
+                            <div>
+                                <label for="publishedYear" class="block text-sm font-medium text-gray-700">
+                                    Published Year *
+                                </label>
+                                <input
+                                    type="number"
+                                    id="publishedYear"
+                                    name="publishedYear"
+                                    required
+                                    min="1000"
+                                    max="2024"
+                                    value="2024"
+                                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="description" class="block text-sm font-medium text-gray-700">
+                                Description
+                            </label>
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="4"
+                                placeholder="Enter book description..."
+                                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                            ></textarea>
+                        </div>
+
+                        <div class="flex justify-end space-x-4">
+                            <button
+                                type="button"
+                                class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                type="submit"
+                                class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            >
+                                Add Book
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

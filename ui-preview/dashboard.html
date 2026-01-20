@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Manager - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="bg-gray-900 text-white w-64 min-h-screen p-4">
+            <div class="mb-8">
+                <h1 class="text-xl font-bold">Library Manager</h1>
+                <p class="text-gray-400 text-sm">Welcome, John Admin</p>
+            </div>
+            
+            <nav class="space-y-2">
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-blue-600 text-white">
+                    <i data-lucide="home" class="w-5 h-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <i data-lucide="book" class="w-5 h-5"></i>
+                    <span>Books</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    <span>Members</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                    <span>Borrowing</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <i data-lucide="tag" class="w-5 h-5"></i>
+                    <span>Genres</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <i data-lucide="user-check" class="w-5 h-5"></i>
+                    <span>Staff</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white">
+                    <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                    <span>Reports</span>
+                </a>
+            </nav>
+            
+            <div class="absolute bottom-4 left-4 right-4">
+                <button class="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white w-full">
+                    <i data-lucide="log-out" class="w-5 h-5"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <div class="space-y-8">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+                    <p class="text-gray-600">Welcome to the Library Management System</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <div class="flex items-center">
+                            <div class="bg-blue-500 rounded-lg p-3">
+                                <i data-lucide="book" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-600">Total Books</p>
+                                <p class="text-2xl font-bold text-gray-900">1,247</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <div class="flex items-center">
+                            <div class="bg-green-500 rounded-lg p-3">
+                                <i data-lucide="users" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-600">Total Members</p>
+                                <p class="text-2xl font-bold text-gray-900">342</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 rounded-lg p-6">
+                        <div class="flex items-center">
+                            <div class="bg-yellow-500 rounded-lg p-3">
+                                <i data-lucide="book-open" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-600">Active Borrows</p>
+                                <p class="text-2xl font-bold text-gray-900">89</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 rounded-lg p-6">
+                        <div class="flex items-center">
+                            <div class="bg-red-500 rounded-lg p-3">
+                                <i data-lucide="alert-triangle" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-600">Overdue Books</p>
+                                <p class="text-2xl font-bold text-gray-900">12</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Quick Actions</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white p-6 rounded-lg text-left transition-colors">
+                            <i data-lucide="plus" class="h-8 w-8 mb-3"></i>
+                            <h3 class="font-semibold mb-1">Add New Book</h3>
+                            <p class="text-sm opacity-90">Add a new book to the library</p>
+                        </button>
+
+                        <button class="bg-green-600 hover:bg-green-700 text-white p-6 rounded-lg text-left transition-colors">
+                            <i data-lucide="plus" class="h-8 w-8 mb-3"></i>
+                            <h3 class="font-semibold mb-1">Register Member</h3>
+                            <p class="text-sm opacity-90">Register a new library member</p>
+                        </button>
+
+                        <button class="bg-yellow-600 hover:bg-yellow-700 text-white p-6 rounded-lg text-left transition-colors">
+                            <i data-lucide="book-open" class="h-8 w-8 mb-3"></i>
+                            <h3 class="font-semibold mb-1">Process Borrow</h3>
+                            <p class="text-sm opacity-90">Process a new book borrowing</p>
+                        </button>
+
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white p-6 rounded-lg text-left transition-colors">
+                            <i data-lucide="search" class="h-8 w-8 mb-3"></i>
+                            <h3 class="font-semibold mb-1">Search Books</h3>
+                            <p class="text-sm opacity-90">Search and manage books</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Recent Activity</h2>
+                    <div class="text-gray-500 text-center py-8">
+                        <i data-lucide="book-open" class="h-12 w-12 mx-auto mb-4 opacity-50"></i>
+                        <p>Recent activity will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
