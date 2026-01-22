@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AuthResponse, Book, Member, Borrow, Genre, DashboardStats, User } from '../types';
+import { AuthResponse, Book, Member, Borrow, Genre, DashboardStats, User, BookCreateRequest, BookUpdateRequest } from '../types';
 
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3000';
 
@@ -33,10 +33,10 @@ export const booksAPI = {
   getById: (id: number) =>
     api.get<Book>(`/books/${id}`),
   
-  create: (bookData: Omit<Book, 'id'>) =>
+  create: (bookData: BookCreateRequest) =>
     api.post<Book>('/books', bookData),
   
-  update: (id: number, bookData: Partial<Book>) =>
+  update: (id: number, bookData: BookUpdateRequest) =>
     api.put<Book>(`/books/${id}`, bookData),
   
   delete: (id: number) =>

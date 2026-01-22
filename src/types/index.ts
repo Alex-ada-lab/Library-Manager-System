@@ -17,6 +17,26 @@ export interface Book {
   description?: string;
 }
 
+export interface BookCreateRequest {
+  title: string;
+  author: string;
+  isbn: string;
+  genre: string;
+  totalCopies: number;
+  publishedYear: number;
+  description?: string;
+}
+
+export interface BookUpdateRequest {
+  title?: string;
+  author?: string;
+  isbn?: string;
+  genre?: string;
+  totalCopies?: number;
+  publishedYear?: number;
+  description?: string;
+}
+
 export interface Member {
   id: number;
   name: string;

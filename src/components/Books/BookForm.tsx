@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { Book, Genre } from '../../types';
+import { Book, Genre, BookCreateRequest, BookUpdateRequest } from '../../types';
 import { booksAPI, genresAPI } from '../../services/api';
 
 const BookForm: React.FC = () => {
