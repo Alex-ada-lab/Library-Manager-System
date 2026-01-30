@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { AuthResponse, Book, Member, Borrow, Genre, DashboardStats, User, BookCreateRequest, BookUpdateRequest } from '../types';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3000';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://back-end-for-assessment.vercel.app';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
